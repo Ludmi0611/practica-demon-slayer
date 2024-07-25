@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+ background-image: url(../img/orchid-flowers-frame-black-background-abstract-art-wallpaper-japanese-design-live-curved-monochrome-vector.jpg);
+ padding: 5rem;
+ background-size: cover;
+}
+h1{
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 3.5rem;
+
+}
+h2{
+    padding: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+}
+a{
+    text-decoration: none;
+    
+}
+.contenedor{
+    display: flex;
+    justify-content: center;
+
+}
+article{
+    position: relative;
+    width: 250px;
+    transition: all .3s ease;
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+article img:first-child{
+    box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
+    border-radius: 4px;
+    object-fit: cover;
+    width: 100%;
+}
+article img:last-child{
+    position: absolute;
+    width: 200px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(25%);
+    transition: .3s ease;
+    opacity: 0;
+}
+article:hover{
+    transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+}
+article::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0) 95%);
+    opacity: 0;
+    transition: all .3s ease;
+}
+article:hover::before{
+    opacity: 1;
+}
+article:hover img:last-child{
+    opacity: 1;
+    transform: translateY(10%);
+}
+footer{
+    background-color: black;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+p{
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 1rem;
+}
+.img_footer{
+    width: 1.5rem;
+    padding-right: 2rem;
+}
